@@ -48,12 +48,12 @@ public class BoardManager : MonoBehaviour {
 			for (int y = -1; y < rows + 1; y++) {
 				GameObject toInstantiate = floorTiles [Random.Range (0, floorTiles.Length)];
 
-				if(x == -1)
-					toInstantiate = outerWallTiles[2];
-				if(x == columns)
-					toInstantiate = outerWallTiles[1];
-				if(y == -1 || y == rows)
-					toInstantiate = outerWallTiles[0];
+				//if(x == -1)
+					//toInstantiate = outerWallTiles[2];
+				//if(x == columns)
+					//toInstantiate = outerWallTiles[1];
+				//if(y == -1 || y == rows)
+					//toInstantiate = outerWallTiles[0];
 
 				GameObject instance = Instantiate (toInstantiate, new Vector3(x,y,0f), Quaternion.identity) as GameObject;
 
