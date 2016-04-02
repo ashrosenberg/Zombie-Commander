@@ -5,11 +5,14 @@ public class Player : MonoBehaviour {
 
 	private Rigidbody rb;
 	public float speed;
+	bool ismoving = false;
+	private Animator animator;
 	//private int count;
 	//public Text countText;
 	//public Text winText;
 
 	void Start(){
+		animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody>();
 		//count = 0;
 		//SetCountText ();
@@ -21,8 +24,9 @@ public class Player : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-
+		animator.SetBool("isMoving", true);
 		rb.AddForce (movement* speed);
+		animator.SetBool("isMoving", false);
 	}
 
 	//void OnTriggerEnter(Collider other){

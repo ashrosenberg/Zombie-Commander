@@ -66,10 +66,10 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(playersTurn || enemiesMoving || doingSetup)
+		//if(playersTurn || enemiesMoving || doingSetup)
 
 			//If any of these are true, return and do not start MoveEnemies.
-			return;
+			//return;
 
 		//Start moving enemies.
 		//StartCoroutine (MoveEnemies ());
